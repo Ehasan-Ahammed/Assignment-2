@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 391 Assignment 2</title>
+    <link rel="stylesheet" href="sw.css">
+</head>
+<body>
+    <header>
+        <h1>CSE 391 Assignment 2: JavaScript Programming</h1>
+        <!-- Navbar -->
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Fortune Generator</a></li>
+                <li><a href="todo.html">To-Do List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="stopwatch">
+        <h2>Stopwatch</h2>
+        <div class="stopwatch-container">
+            <div class="stopwatch">
+                <div class="face">
+                    <div class="hour-hand"></div>
+                    <div class="minute-hand"></div>
+                    <div class="second-hand"></div>
+                </div>
+                <div class="center"></div>
+            </div>
+            <div class="controls">
+                <button id="startStop" onclick="startStop()" aria-label="Start or stop the stopwatch">Start</button>
+                <button id="reset" onclick="reset()" aria-label="Reset the stopwatch">Reset</button>
+            </div>
+        </div>
+        <div id="timer">00:00</div>
+    </section>
+
+    <footer>
+        <p>True wisdom comes not from knowledge, but from understanding.</p>
+    </footer>
+    
+    <script src="sw.js"></script>
+
+</body>
+</html>
