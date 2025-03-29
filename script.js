@@ -21,34 +21,52 @@ function getRandomFortune() {
     fortuneText.textContent = fortunes[randomIndex];
 }
 
-// Change font color
-document.getElementById("font-color-btn").addEventListener("click", () => {
-    const colors = ["red", "blue", "green", "purple"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    fortuneText.style.color = randomColor;
-});
+// Theme configurations
+const themes = {
+    blue: {
+        backgroundColor: "lightblue",
+        textColor: "darkblue",
+        borderColor: "navy",
+        fontSize: "1.2em",
+        fontFamily: "Arial"
+    },
+    green: {
+        backgroundColor: "lightgreen",
+        textColor: "darkgreen",
+        borderColor: "forestgreen",
+        fontSize: "1.4em",
+        fontFamily: "Georgia"
+    },
+    purple: {
+        backgroundColor: "lavender",
+        textColor: "darkpurple",
+        borderColor: "purple",
+        fontSize: "1.3em",
+        fontFamily: "Verdana"
+    },
+    orange: {
+        backgroundColor: "lightyellow",
+        textColor: "darkorange",
+        borderColor: "orange",
+        fontSize: "1.5em",
+        fontFamily: "Courier New"
+    }
+};
 
-// Change background color
-document.getElementById("bg-color-btn").addEventListener("click", () => {
-    const colors = ["lightyellow", "lightblue", "lightgreen", "lavender"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    fortuneBox.style.backgroundColor = randomColor;
-});
+// Apply theme function
+function applyTheme(theme) {
+    fortuneBox.style.backgroundColor = theme.backgroundColor;
+    fortuneText.style.color = theme.textColor;
+    fortuneBox.style.borderColor = theme.borderColor;
+    fortuneText.style.fontSize = theme.fontSize;
+    fortuneText.style.fontFamily = theme.fontFamily;
+}
 
-// Change border color
-document.getElementById("border-color-btn").addEventListener("click", () => {
-    const colors = ["orange", "teal", "pink", "brown"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    fortuneBox.style.borderColor = randomColor;
-});
-
-// Change font size and family
-document.getElementById("font-size-btn").addEventListener("click", () => {
-    const fonts = ["Arial", "Courier New", "Georgia", "Verdana"];
-    const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
-    fortuneText.style.fontFamily = randomFont;
-    fortuneText.style.fontSize = "1.5em";
-});
+// Add event listeners for theme buttons
+document.getElementById("blue-btn").addEventListener("click", () => applyTheme(themes.blue));
+document.getElementById("green-btn").addEventListener("click", () => applyTheme(themes.green));
+document.getElementById("purple-btn").addEventListener("click", () => applyTheme(themes.purple));
+document.getElementById("orange-btn").addEventListener("click", () => applyTheme(themes.orange));
 
 // Load a random fortune on page load
 window.onload = getRandomFortune;
