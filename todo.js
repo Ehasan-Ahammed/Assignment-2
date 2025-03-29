@@ -67,6 +67,5 @@ taskList.addEventListener("change", toggleComplete);
 
 // Load tasks from localStorage on page load
 window.onload = () => {
-    getRandomFortune();
     loadTasks();
 };
