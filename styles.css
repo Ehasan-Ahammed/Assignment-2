@@ -74,19 +74,42 @@ section {
     background-color: #f9f9f9;
 }
 
+#fortune-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 #fortune-controls button {
-    margin: 5px;
-    padding: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #333;
-    color: #fff;
-    transition: background-color 0.3s;
+    transition: transform 0.2s;
+    color: white;
 }
 
 #fortune-controls button:hover {
-    background-color: #555;
+    transform: scale(1.05);
+}
+
+#blue-btn {
+    background-color: #007bff;
+}
+
+#green-btn {
+    background-color: #28a745;
+}
+
+#purple-btn {
+    background-color: #6f42c1;
+}
+
+#orange-btn {
+    background-color: #fd7e14;
 }
 
 /* Stopwatch Styles */
