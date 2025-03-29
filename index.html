@@ -5,11 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSE 391 Assignment 2</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #fortune-box {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            border: 3px solid #333;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #fortune-text {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>CSE 391 Assignment 2: JavaScript Programming</h1>
-        <!-- Navbar -->
         <nav>
             <ul class="navbar">
                 <li><a href="sw.html">Stopwatch</a></li>
@@ -25,13 +54,12 @@
             <p id="fortune-text">Your fortune will appear here!</p>
         </div>
         <div id="fortune-controls">
-            <button id="font-color-btn" aria-label="Change font color">Change Font Color</button>
-            <button id="bg-color-btn" aria-label="Change background color">Change Background Color</button>
-            <button id="border-color-btn" aria-label="Change border color">Change Border Color</button>
-            <button id="font-size-btn" aria-label="Change font size">Change Font Size</button>
+            <button id="blue-btn">Blue </button>
+            <button id="green-btn">Green </button>
+            <button id="purple-btn">Purple </button>
+            <button id="orange-btn">Orange </button>
         </div>
     </section>
-
 
     <footer>
         <p>True wisdom comes not from knowledge, but from understanding.</p>
